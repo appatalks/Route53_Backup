@@ -26,3 +26,9 @@ https://www.reddit.com/r/aws/comments/6xcm06/route_53_backup_tools/
 https://www.aaronmedacco.com/blog/post/2017/01/03/automating-backups-of-your-route-53-hosted-zone-dns-records
 http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html
 http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/pseudo-parameter-reference.html
+
+
+Bitcoin Donation:   16CowvxvLSR4BPEP9KJZiR622UU7hGEce5
+Ethereum Donation:	0xf75278bd6e2006e6ef4847c9a9293e509ab815c5
+
+
