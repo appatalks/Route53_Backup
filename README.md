@@ -14,3 +14,15 @@ What to check for after creation  (Currently set to run on any Route53 Adjustmen
      -- IAM Role has been created <p>
      -- CloudWatch Event has been created <p>
      -- Lambda Function Created <p>
+
+References: 
+http://boto3.readthedocs.io/en/latest/reference/services/lambda.html
+http://boto3.readthedocs.io/en/latest/reference/services/s3.html
+http://boto3.readthedocs.io/en/latest/reference/services/route53.html
+http://docs.aws.amazon.com/Route53/latest/APIReference/API_ListHostedZones.html
+http://docs.aws.amazon.com/Route53/latest/APIReference/API_ListResourceRecordSets.html
+http://grahamm.uk/post/147536460855/backup-route53-to-s3-using-lambda
+https://www.reddit.com/r/aws/comments/6xcm06/route_53_backup_tools/
+https://www.aaronmedacco.com/blog/post/2017/01/03/automating-backups-of-your-route-53-hosted-zone-dns-records
+http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html
+http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/pseudo-parameter-reference.html
