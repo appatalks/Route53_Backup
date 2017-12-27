@@ -48,6 +48,7 @@
         "Code": {
           "ZipFile":  { "Fn::Join": ["\n", [
              "import boto3", 
+             "import json", 
              "from datetime import date\n",
              { "Fn::Join": ["",["backup_bucket = '",{"Ref":"BucketName"},"'"]]},
              { "Fn::Join": ["",["region = '",{"Ref":"AWS::Region"},"'"]]},             
@@ -87,6 +88,7 @@
              "            newzone = zone_id['HostedZone']['Id']\n",
 
              "            all_rrs = [];\n",
+             "            out_rr = [];\n",
 
              "            zone_rr = route53.list_resource_record_sets(HostedZoneId=newzone)",
              "            next_record = None\n",
@@ -101,7 +103,7 @@
              "                for rr in zone_rr['ResourceRecordSets']:",
              "                    all_rrs.append(rr)\n",
 
-             "            s3.Bucket(backup_bucket).put_object(Key=today + '/' + zone_name, Body=str(all_rrs))\n",
+             "            s3.Bucket(backup_bucket).put_object(Key=today + '/' + zone_name, Body=json.dumps(out_rr, indent=2))\n",
 
              "    except Exception as e:",
              "        print(e)"
