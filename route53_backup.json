@@ -87,21 +87,10 @@
              "            zone_id = route53.get_hosted_zone(Id=zone['Id'])",
              "            newzone = zone_id['HostedZone']['Id']\n",
 
-             "            all_rrs = [];\n",
              "            out_rr = [];\n",
 
-             "            zone_rr = route53.list_resource_record_sets(HostedZoneId=newzone)",
+             "            out_rr = route53.list_resource_record_sets(HostedZoneId=newzone)",
              "            next_record = None\n",
-
-             "            for rr in zone_rr['ResourceRecordSets']:",
-             "                all_rrs.append(rr)\n",
-
-             "            while zone_rr['IsTruncated'] == True:",
-             "                next_record = zone_rr['NextRecordName']",
-             "                zone_rr = route53.list_resource_record_sets(HostedZoneId=newzone,StartRecordName=next_record)\n",
-
-             "                for rr in zone_rr['ResourceRecordSets']:",
-             "                    all_rrs.append(rr)\n",
 
              "            s3.Bucket(backup_bucket).put_object(Key=today + '/' + zone_name, Body=json.dumps(out_rr, indent=2))\n",
 
