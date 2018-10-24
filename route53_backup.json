@@ -60,9 +60,9 @@
              "    sts_client = boto3.client('sts')\n",
              
              "    assumedRoleObject = sts_client.assume_role(",
-             { "Fn::Join": ["",["		RoleArn=\"",{"Fn::GetAtt": ["Route53Backup","Arn"] },"\","]]},
-             "    	RoleSessionName=\"Route53Backup\"",
-             "	)\n",
+             { "Fn::Join": ["",["        RoleArn=\"",{"Fn::GetAtt": ["Route53Backup","Arn"] },"\","]]},
+             "      RoleSessionName=\"Route53Backup\"",
+             "  )\n",
  
              "    credentials = assumedRoleObject['Credentials']\n",
  
